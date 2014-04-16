@@ -1,0 +1,177 @@
+/* all app scss styles here */
+
+.row {
+  text-align: center;
+  width: 100%;
+  margin: 50px auto 150px auto;
+    .round {
+      border: 4px solid $mainGreen;
+      border-radius: 50%;
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+    }
+  li {
+    list-style: none;
+    display: inline;
+    padding: 20px;
+  }
+  #map {
+    @include background-img('http://www.enternewmedia.com/wp-content/uploads/2011/06/map.jpg', center top, no-repeat, contain);
+    padding-top: 76.55%;
+  }
+}
+.overview {
+  margin-top: 0;
+}
+.consultation {
+  @include background-img('http://wallpaperfast.com/wp-content/uploads/2013/06/New-York-City-Desktop-Wallpaper.jpg', -400px, repeat, 1920px 1440px);
+  div {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 30px 20px;
+  }
+}
+
+// .round.first {
+//   left: 320px;
+// }
+
+// .round.last {
+//   left: -320px;
+// }
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: blue;
+}
+
+@keyframes scale {
+  from { width: 100% }
+    to { opacity: 150% }
+}
+
+.box:hover {
+    @include animation(scale 1.0s ease-in, slide 2.0s ease);
+}
+
+.team {
+  li {
+    width: 20%;
+    div {
+      width: 100%;
+      padding-top: 66.67%;
+    }
+    #mark {
+      @include background-img('http://www.enternewmedia.com/wp-content/uploads/2011/06/12-07-05_mark_web.jpg');
+    }
+    #lynn {
+      @include background-img('http://www.enternewmedia.com/wp-content/uploads/2012/07/12-07-05_lynn_web.jpg');
+    }
+    #zuzy {
+      @include background-img('http://www.enternewmedia.com/wp-content/uploads/2011/06/zuzana-216x144.jpg');
+    }
+    #joe {
+      @include background-img('http://www.enternewmedia.com/wp-content/uploads/2012/12/Joe.jpg');
+    }
+    #eric {
+      @include background-img('http://www.enternewmedia.com/wp-content/uploads/2011/06/eric-216x144.jpg');
+    }
+  }
+}
+
+body {
+  position: relative;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  padding-top: 40px;
+  background: #000 url('../images/10_percent_dots.png');
+}
+
+#team {
+  background: grey url('../images/dashs_10.png');
+}
+
+#head.row {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  top: 0px;
+  left: 0px;
+  @include background-img('../images/main_bg.png', center center, no-repeat, cover);
+  max-width: 100%;
+  z-index: 2;
+  margin: 0;
+  position: relative;
+}
+
+.header-content {
+  color: $white;
+  width: 80%;
+  margin: 60px auto 0 auto;
+  background: rgba(0, 0, 0, 0.7) url('../images/10_percent_dots.png');
+  // -webkit-filter: blur(1px);
+  // -moz-filter: blur(1px);
+  // -o-filter: blur(1px);
+  // -ms-filter: blur(1px);
+  // filter: blur(1px);
+  position: relative;
+  padding: 5px;
+}
+
+.inner-border {
+  padding: 85px 20px 30px 20px;
+  border: 2px solid $white;
+}
+
+// .header-content:before {
+//   content: "";
+//   -webkit-box-shadow: inset 0 0 10px #fff;
+//   display: block;
+//   position: absolute;
+//   left: 10px;
+//   background: blue;
+//   width: 75%;
+//   height: 200px;
+// }
+
+#services {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  top: 100px;
+}
+
+nav.top-bar {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+.rotate {
+  @include animation(rotate-down 1.5s linear);
+}
+
+@-webkit-keyframes rotate-down {
+  0%   { -webkit-transform: rotateX(90deg); transform-origin: top top;}
+  100% { -webkit-transform: rotateX(0deg); transform-origin: top top;}
+}
+@-moz-keyframes rotate-down {
+  0%   { -moz-transform: rotateX(90deg); }
+  100% { -moz-transform: rotateX(0deg); }
+}
+@-o-keyframes rotate-down {
+  0%   { -o-transform: rotateX(90deg); }
+  100% { -o-transform: rotateX(0deg); }
+}
+@keyframes rotate-down {
+  0%   { trans: rotateX(90deg); }
+  100% { trans: rotateX(0deg); }
+}
+
+
