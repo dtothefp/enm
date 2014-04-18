@@ -19,125 +19,231 @@
     <!-- endbuild -->
   </head>
   <body>
-    <nav class="top-bar" >
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="#">EnterNewMedia</a></h1>
-        </li>
-      </ul>
-
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#services">Services</a>
-          </li>
-          <li>
-            <a href="#team">Team</a>
-          </li>
-          <li>
-            <a href="#clients">Clients</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </section>
-    </nav>
-    <div id ="head" class="row overview">
+    <div id="home-nav"></div>
+    <div id ="head" class="overview">
       <div class="header-content">
         <div class="inner-border">
-          <h1 id="brand">enter:new media</h1>
-          <h1 id="headline">is the leader in advocacy marketing strategy, execution and measurment</h1>
+          <div class="header-inner-content">
+            <div class="logo-green"></div>
+            <h1 id="brand">enter:new media</h1>
+            <h1 id="headline">is the leader in advocacy marketing strategy, execution and measurment</h1>
+          </div>
         </div>
       </div>
+      <div class="arrow"></div>
     </div>
+    <div class="sticky">
+      <nav class="top-bar" data-topbar data-start="display:none;" data-top="display:block;">
+        <a href="#home-nav" data-menu-offset="-45">
+          <img id="logo" src="images/white_keytab.png" height="95" width="82" alt="" />
+        </a>
+        <ul class="title-area">
+          <li class="name"></li>
+          <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class="active">
+              <a href="#services-nav">Services</a>
+            </li>
+            <li class="">
+              <a href="#team-nav">Team</a>
+            </li>
+            <li class="">
+              <a href="#clients-nav">Clients</a>
+            </li>
+            <li class="">
+              <a href="#contact-nav">Contact</a>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+    <div id="services-nav" data-menu-offset="-45"></div>
     <div id="services" class="row services">
-      <h1>Services</h1>
-      <div>
+      <div class="top-content">
+        <h1>Services</h1>
         <p>
-        enter: new media works with brands to build successful advocacy programs that are proven to deliver high engagement rates, conversions to purchase, and ROI.
+        enter: new media works withmedium-2 columnsbrands to build successful advocacy programs that are proven to deliver high engagement rates, conversions to purchase, and ROI.
         </p>
       </div>
-      <div class="small-4 columns">
+      <div class="medium-4 columns">
         <div class="round first" data-start="" data-center=""></div>
         <h2>Recruit</h2>
         <p>ENM recruits a brand's most passionate and socially influential fans from thier existing communities.</p>
       </div>
-      <div class="small-4 columns">
-        <div class="round"></div>
+      <div class="medium-4 columns">
+        <div class="round middle"></div>
         <h2>Engage</h2>
-        <p>ENM engases advocates on a sustainable basis using a variety of interactive tools.</p>
+        <p>ENM engages advocates on a sustainable basis using a variety of interactive tools.</p>
       </div>
-      <div class="small-4 columns">
+      <div class="medium-4 columns">
         <div class="round last" data-start="" data-center=""></div>
         <h2>Measure</h2>
         <p>ENM measures the success of an advocacy program bassed on quantitative and qualitative metrics.</p>
       </div>
-    </div>
-    <div class="adjusted-content">
-      <div id="additional" class="row consultation" data-top-bottom="background-position:-400px;" data-bottom-top="background-position:0px;">
-        <div class="large-12 columns">
-          <h1>SOCIAL MEDIA CONSULTING &amp; ANALYTICS</h1>
+    </div> <!-- end #services -->
+    <div id="additional" class="row" data-top-bottom="background-position:-400px;" data-bottom-top="background-position:0px;">
+      <div class="row">
+        <h1>Additonal Services</h1>
+      </div>
+      <div class="row">
+        <div class="medium-5 columns">
+          <h2>Social Media Consulting &amp; Analytics</h2>
           <p>
-            enter: new media utilizes proprietary social analytics tools to evaluate and optimize social engagement. enter: new media provides the following services to support their social media consulting effort
+            ENM manages, analyzes, and optimizes social communities with the goal of continuously increasing engagement.
           </p>
-          <ul>
-            <li>Social Media Audit</li>
-            <li>Competitive Analysis</li>
-            <li>Content Creation</li>
-            <li>Community Management</li>
-          </ul>
-          <h1>BRAND ADVOCACY PROGRAM MANAGEMENT</h1>
+        </div>
+        <div class="medium-5 medium-offset-2 columns">
+          <h2>Influencer &amp; Blogger Relations</h2>
           <p>
-            enter: new media works with key technology partners to identify, recruit, and engage a brand’s most socially influential and passionate fans, and manage these relationships on an a sustainable basis.
+            ENM utilizes relationships with key bloggers and influencers to  execute influencer gifting programs.
           </p>
-          <h1>INFLUENCER &amp; BLOGGER RELATIONS</h1>
-          <p>
-            enter: new media utilizes relationships with key bloggers and influencers to  execute influencer gifting programs. enter: new media has relationships with bloggers in the fashion, beauty, lifestyle, spirits, and interiors/DIY sectors. Influencer gifting programs deliver post-campaign reports outlining the following metrics
-          </p>
-          <ul>
-            <li>Reach</li>
-            <li>Sentiment</li>
-            <li>Engagement</li>
-            <li>Post-share Engagement</li>
-          </ul>
         </div>
       </div>
-      <div id="team" class="row team">
-        <h1>Team</h1>
-        <ul class="large-block-grid-5">
-          <li>
-            <div id="lynn" data-bottom-top="transform: rotate(0deg);" data-100-center="transform: rotate(360deg);"></div>
-            <p>Lynn Murray</p>
-          </li>
-          <li>
-            <div id="zuzy" data-bottom-top="transform: rotate(0deg);" data-center="transform: rotate(360deg);"></div>
-            <p>Zuzana Cerman Zechman</p>
-          </li>
-          <li>
-            <div  id="mark"></div>
-            <p>Mark Curtis</p>
-          </li>
-          <li>
-            <div id="joe" data-bottom-top="transform: rotate(0deg);" data-center="transform: rotate(-360deg);"></div>
-            <p>Joe Charnitski</p>
-          </li>
-          <li>
-            <div id="eric" data-bottom-top="transform: rotate(0deg);" data-100-center="transform: rotate(-360deg);"></div>
-            <p>Eric Egerton</p>
-          </li>
-        </ul>
+    </div>
+    <div id="team-nav" data-menu-offset="-45"></div>
+    <div class="team-header-container">
+      <div class="team-header"></div>
+      <!-- <div class="arrow-container">
+         <div class="team-arrow"></div>
+      </div> -->
+    </div>
+    <div id="team">
+      <div class="top_wedge"></div>
+      <div class="team-bg">
+        <div class="row">
+          <div class="medium-6 columns">
+            <div class="top-pic-container">
+              <div class="top-line"></div>
+              <div id="mark" class="top-pic"></div>
+            </div>
+            <h1>Mark Curtis</h1>
+            <h2>CEO</h2>
+            <p>
+              A founder of three successful digital ventures, Mark Curtis is constantly exploring the new ways to push the limits of digital and social strategies to create measurable brand value for his global Fortune 500 customers. 
+            </p>
+          </div>
+          <div class="medium-6 columns">
+            <div class="top-pic-container">
+              <div id="lynn" class="top-pic"></div>
+            </div>
+            <h1>Lynn Murray</h1>
+            <h2>COO</h2>
+            <p>
+              Lynn is an industry veteran that drives excellence for her clients through outstanding service and impactful strategies that consistently deliver results.
+            </p>
+          </div>
+        </div>
+        <div class="spotlight-container">
+          <div class="row">
+            <h1>Team Member Spotlight</h1>
+          </div>
+          <div class="row">
+            <div class="small-6 medium-3 columns">
+              <div id="manisha" class="spotlight-pic"></div>
+            </div>
+            <div class="small-6 medium-3 columns">
+              <div id="ethan" class="spotlight-pic"></div>
+            </div>
+            <div class="small-6 medium-3 columns">
+              <div id="alex" class="spotlight-pic"></div>
+            </div>
+            <div class="small-6 medium-3 columns">
+              <div id="eric" class="spotlight-pic"></div>
+            </div>
+          </div>
+          <div class="row">
+            <h2>Social Media Analysts</h2>
+          </div>
+          <div class="row">
+            <div class="small-6 medium-3 columns">
+              <div id="mellisa" class="spotlight-pic"></div>
+            </div>
+            <div class="small-6 medium-3 columns">
+              <div id="andrew" class="spotlight-pic"></div>
+            </div>
+            <div class="small-6 medium-3 columns">
+              <div id="joe" class="spotlight-pic"></div>
+            </div>
+            <div class="small-6 medium-3 columns">
+              <div id="garrison" class="spotlight-pic"></div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- end top bg -->
+      <div class="team-bg-bottom"></div>
+    </div>
+    <div id="clients-nav" data-menu-offset="-45"></div>
+    <div id="clients" class="row">
+      <h1>Clients</h1>
+      <div class="logos-container">
+        <div class="client-logos"></div>
       </div>
-      <div id="contact" class="row">
+    </div>
+        <div class="seperator"></div>
+    <div id="partners">
+      <div class="row">
+        <h1>Partners</h1>
+      </div>
+      <div class="row">
+        <div class="medium-6 columns">
+          <div class="partner-box">
+            <div id="branderati" class="logo"></div>
+            <p>
+              BRANDERATI provides the technology platform used to manage advocacy programs.
+            </p>
+          </div>
+        </div>
+        <div class="medium-6 columns">
+          <div class="partner-box">
+            <div id="dsn" class="logo"></div>
+            <p>
+              The Digital Stylist Network is a network of professional fashion stylists that brands can tap into for fashion and beauty influencer campaigns.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="medium-6 columns">
+          <div class="partner-box">
+            <div id="sprinklr" class="logo"></div>
+            <p>
+              Sprinklr is a social relationships platform used to manage and analyze a social communities.
+            </p>
+          </div>
+        </div>
+        <div class="medium-6 columns">
+          <div class="partner-box">
+            <div id="o2o" class="logo"></div>
+            <p>
+              One2One Network consists of 25,000 highly influential women bloggers, that is activated for blogger gifting projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact-nav"></div>
+    <div id="contact">
+      <div class="row">
         <h1>Contact</h1>
-        <div class="large-4 columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, accusantium, odio, dicta fugit doloremque nesciunt explicabo eaque atque possimus impedit non laudantium alias quia. Dolore, odit, amet repellat vero aperiam voluptatum ratione excepturi ab beatae pariatur nostrum magnam eius itaque sunt inventore ullam eos debitis harum asperiores ex modi veritatis delectus in laborum ad corporis ducimus vitae aut ipsam commodi officia omnis deleniti enim quibusdam nulla nemo quae libero? Accusamus, aliquam minima dignissimos distinctio esse. Animi, fugit consequatur voluptatem ratione tempora atque nihil possimus in consequuntur molestias. Sunt, placeat, quaerat minus beatae vitae quidem ipsa non perferendis ad asperiores mollitia.</div>
-        <div id="map" class="large-8 columns"></div>
       </div>
-    </div>  <!-- end .adjusted-content  -->
+        <div class="contact-container">
+          <div class="row">
+            <div class="small-6 columns">
+              <div id="phone" class="button-custom"></div>
+            </div>
+            <div class="small-6 columns">
+              <div id="email" class="button-custom"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="map"></div>
+          </div>
+        </div>
+    </div>
   <script type="text/javascript">
     window.onload = function() {
     }
@@ -173,7 +279,10 @@
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->
     <script src="js/app.js"></script>
-    <script>$(document).foundation();</script>
+    <script>
+      var s = skrollr.init();
+      skrollr.menu.init(s);
+    </script>
     <!-- endbuild -->
   </body>
 </html>

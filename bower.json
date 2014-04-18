@@ -5,6 +5,7 @@
     "font-awesome": "~4.0.3",
     "skrollr": "~0.6.21",
     "skrollr-menu": "~0.1.11",
-    "skrollr-stylesheets": "~0.0.4"
+    "skrollr-stylesheets": "~0.0.4",
+    "saffron": "~0.2.2"
   }
 }
