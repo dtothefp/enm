@@ -1,58 +1,108 @@
-var app = (function(document, $) {
+// var app = (function(document, $) {
 
-  'use strict';
-  var docElem = document.documentElement,
+//   'use strict';
+//   var docElem = document.documentElement,
 
-    _userAgentInit = function() {
-      docElem.setAttribute('data-useragent', navigator.userAgent);
-    },
-    _init = function() {
-      $(document).foundation();
-      _userAgentInit();
-    };
+//     _userAgentInit = function() {
+//       docElem.setAttribute('data-useragent', navigator.userAgent);
+//     },
+//     _init = function() {
+//       $(document).foundation();
+//       _userAgentInit();
+//     };
 
-  return {
-    init: _init
-  };
+//   return {
+//     init: _init
+//   };
 
-})(document, jQuery);
+// })(document, jQuery);
 
-(function() {
+// (function() {
 
-  'use strict';
-  app.init();
+//   'use strict';
+//   app.init();
 
-})();
+// })();
 
-$(".right li").on("click", function(e) {
-  $(".active").removeClass("active");
-  $(this).addClass("active");
-});
+// $(".right li").on("click", function(e) {
+//   $(".active").removeClass("active");
+//   $(this).addClass("active");
+// });
 
-var navHeight = $(".top-bar").height();
+window.onload = function() {
 
-var lastId,
-    topMenu = $(".sticky"),
-    topMenuHeight = topMenu.outerHeight()+15,
-    // All list items
-    menuItems = topMenu.find("a"),
-    // Anchors corresponding to menu items
-    scrollItems = menuItems.map(function(){
-      var item = $($(this).attr("href"));
-      if (item.length) { return item; }
+  (function(){
+    var child;
+    $('.spotlight-pic').on({
+        mouseenter: function(e) {
+          child = $('.member-title').children()[Number($(this).data().position)];
+          $(child).fadeIn();
+        },
+        mouseleave: function() {
+          $(child).fadeOut();
+        }
     });
-debugger;
+  }());
 
-var items = scrollItems.map(function(){
-  return {
-    position: $(this).position().top,
-    id: $(this).attr("id")
-  };
-})
+  // ******** Create Nav Highlighting on Scroll *********
+  var a = $('nav.top-bar').find('a');
+  var scrollItems;
+  scrollItems = a.map(function() {
+    // get the element that corresponds to the href
+    var $link = $($(this).attr('href'));
+    // check that is has a lenght, i.e. href has a corresponing element
+    if ($link.length) {
+      return $link;
+    }
+  });
+  var lastId;
 
-$(window).scroll(function(e) {
+  function bindScroll() {
+    var current = scrollItems.map(function(){
+      // find all elments that are above the nav bar
+      if ( $(this).offset().top <= $(window).scrollTop() + $('nav.top-bar').height() * 2 ) {
+        return this;
+      }
+    });
+    // get the current element just above the navbar
+    current = current[current.length -1];
+    // get the ID
+    var id = current && current.length ? current[0].id : '';
+    if (id.length) {
+      if (id != lastId) {
+        $('nav li.active').removeClass('active');
+      }
+      $('a[href=#' + id + ']').parent().addClass('active');
+    }
+    lastId = id;
+  }
+  $(window).on('scroll', bindScroll);
+}
 
-});
+// var navHeight = $(".top-bar").height();
+
+// var lastId,
+//     topMenu = $(".sticky"),
+//     topMenuHeight = topMenu.outerHeight()+15,
+//     // All list items
+//     menuItems = topMenu.find("a"),
+//     // Anchors corresponding to menu items
+//     scrollItems = menuItems.map(function(){
+//       var item = $($(this).attr("href"));
+//       if (item.length) { return item; }
+//     });
+// debugger;
+
+// var items = scrollItems.map(function(){
+//   return {
+//     position: $(this).position().top,
+//     id: $(this).attr("id")
+//   };
+// })
+
+// $(window).scroll(function(e) {
+
+// });
 // // Bind to scroll
 // $(window).scroll(function(){
 //    // Get container scroll position
@@ -102,7 +152,7 @@ $(window).scroll(function(e) {
 //  var lastScrolled = scrolled;
 // }
 
-window.onload = function() {
+// window.onload = function() {
   // window.scrollTo(0,0);
   // var headerElm = document.getElementById('head');
   // var nextElm = document.getElementById("services");
@@ -124,5 +174,5 @@ window.onload = function() {
   //    $(nextElm).fadeIn();
   //  }
   // }
-  var s = skrollr.init({});
-}
+  // var s = skrollr.init({});
+// }

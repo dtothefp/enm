@@ -11,6 +11,18 @@ body {
   }
 }
 
+nav {
+  opacity: 0;
+  -webkit-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+   -moz-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+     -o-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+}
+.fixed {
+  nav {
+    opacity: 1;
+  }
+}
 .top-bar {
   background: #000 url('../images/dots.png');
   border-bottom: 4px solid $mainGreen;
@@ -44,11 +56,14 @@ body {
     margin-right: 0;
   }
   .top-bar-section {
-    ul li > a {
-      font-weight: bold;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 16px;
+    ul {
+      background: none;
+      li > a {
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
     }
   }
   a {
@@ -239,10 +254,40 @@ body {
     .row:last-child {
       margin-bottom: 0;
     }
+    .member-title {
+      height: 50px;
+      position: relative;
+      h2 {
+        text-align: center;
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: 0;
+      }
+    }
     .spotlight-pic {
       width: 80%;
       margin: 0 auto;
       padding-top: 100%;
+      position: relative;
+      cursor: pointer;
+      h3 {
+        opacity: 0;
+        position: relative;
+        top: -70px;
+        width: 100px;
+        text-align: center;
+        margin: 0 auto;
+        -webkit-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        -moz-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        -o-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+      }
+    }
+    .spotlight-pic:hover {
+      h3 {
+        opacity: 1;
+      }
     }
     #manisha {
       @include background-img('../images/manisha.png');
@@ -256,7 +301,7 @@ body {
     #eric {
       @include background-img('../images/eric.png');
     }
-    #mellisa {
+    #melissa {
       @include background-img('../images/mellisa.png');
     }
     #andrew {

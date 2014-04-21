@@ -33,12 +33,14 @@
       <div class="arrow"></div>
     </div>
     <div class="sticky">
-      <nav class="top-bar" data-topbar data-start="display:none;" data-top="display:block;">
+      <nav class="top-bar" data-topbar>
         <a href="#home-nav" data-menu-offset="-45">
           <img id="logo" src="images/white_keytab.png" height="95" width="82" alt="" />
         </a>
         <ul class="title-area">
-          <li class="name"></li>
+          <li class="name">
+            <!-- <h1><a href="#">My Site</a></h1> -->
+          </li>
           <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
         </ul>
 
@@ -117,7 +119,6 @@
         <div class="row">
           <div class="medium-6 columns">
             <div class="top-pic-container">
-              <div class="top-line"></div>
               <div id="mark" class="top-pic"></div>
             </div>
             <h1>Mark Curtis</h1>
@@ -143,33 +144,56 @@
           </div>
           <div class="row">
             <div class="small-6 medium-3 columns">
-              <div id="manisha" class="spotlight-pic"></div>
+              <div id="manisha" class="spotlight-pic" data-position="0">
+                <h3>Manisha Marberry</h3>
+              </div>
             </div>
             <div class="small-6 medium-3 columns">
-              <div id="ethan" class="spotlight-pic"></div>
+              <div id="ethan" class="spotlight-pic" data-position="1">
+                <h3>Ethan Tome</h3>
+              </div>
             </div>
             <div class="small-6 medium-3 columns">
-              <div id="alex" class="spotlight-pic"></div>
+              <div id="alex" class="spotlight-pic" data-position="2">
+                <h3>Alexandra Bouchard</h3>
+              </div>
             </div>
             <div class="small-6 medium-3 columns">
-              <div id="eric" class="spotlight-pic"></div>
+              <div id="eric" class="spotlight-pic" data-position="3">
+                <h3>Eric Egerton</h3>
+              </div>
             </div>
           </div>
-          <div class="row">
-            <h2>Social Media Analysts</h2>
+          <div class="row member-title">
+            <h2>Dope Ass This</h2>
+            <h2>Dope Ass That</h2>
+            <h2>Dope Ass Another</h2>
+            <h2>Dope Ass Your Motha</h2>
+            <h2>Dope Ass More</h2>
+            <h2>Dope Ass Again</h2>
+            <h2>Dope Ass Random</h2>
+            <h2>Dope Ass Somethings</h2>
           </div>
           <div class="row">
             <div class="small-6 medium-3 columns">
-              <div id="mellisa" class="spotlight-pic"></div>
+              <div id="melissa" class="spotlight-pic" data-position="4">
+                <h3>Melissa Burriss</h3>
+              </div>
             </div>
             <div class="small-6 medium-3 columns">
-              <div id="andrew" class="spotlight-pic"></div>
+              <div id="andrew" class="spotlight-pic" data-position="5">
+                <h3>Andrew Grabelsky</h3>
+              </div>
             </div>
             <div class="small-6 medium-3 columns">
-              <div id="joe" class="spotlight-pic"></div>
+              <div id="joe" class="spotlight-pic" data-position="6">
+                <h3>Joe Charnitski</h3>
+              </div>
             </div>
             <div class="small-6 medium-3 columns">
-              <div id="garrison" class="spotlight-pic"></div>
+              <div id="garrison" class="spotlight-pic" data-position="7">
+                <h3>Garrison</h3>
+              </div>
             </div>
           </div>
         </div>
@@ -244,11 +268,6 @@
           </div>
         </div>
     </div>
-  <script type="text/javascript">
-    window.onload = function() {
-    }
-  </script>
-
     <!-- build:js js/vendor/libraries.min.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -279,6 +298,12 @@
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->
     <script src="js/app.js"></script>
+    <script type="text/javascript">
+      $(document).foundation()
+        .foundation('topbar', {
+            stickyClass : 'be-sticky'
+        });
+    </script>
     <script>
       var s = skrollr.init();
       skrollr.menu.init(s);
